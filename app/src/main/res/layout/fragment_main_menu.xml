@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/background02"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/foreground"
+        android:src="@drawable/background03"
+        android:scaleType="centerCrop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginEnd="180dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.miner.game.core.library.CustomImageButton
+            android:id="@+id/play"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/play01" />
+
+        <com.miner.game.core.library.CustomImageButton
+            android:id="@+id/quit"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/quit" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/quitLayout"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_width="310dp"
+        android:layout_height="320dp"
+        android:layout_marginStart="180dp"
+        android:background="@drawable/text_box01"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            style="@style/BasicText"
+            android:textSize="27dp"
+            android:text="quit"
+            android:textAllCaps="true"
+            android:layout_marginTop="40dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <View
+            android:layout_width="100dp"
+            android:layout_height="2dp"
+            android:background="@color/black"/>
+
+        <TextView
+            style="@style/BasicText"
+            android:textSize="24dp"
+            android:text="Do you really\nwant to\nquit the game?"
+            android:textAllCaps="true"
+            android:layout_marginTop="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.miner.game.core.library.CustomImageButton
+                android:id="@+id/yes"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:src="@drawable/yes" />
+
+            <com.miner.game.core.library.CustomImageButton
+                android:id="@+id/no"
+                android:layout_marginStart="20dp"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:src="@drawable/no"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        style="@style/BasicText"
+        android:id="@+id/privacyText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/privacy_policy"
+        android:textColor="#0000FF"
+        android:layout_margin="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
