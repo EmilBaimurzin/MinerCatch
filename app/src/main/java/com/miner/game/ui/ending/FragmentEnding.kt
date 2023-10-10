@@ -15,7 +15,7 @@ class FragmentEnding: GameFragment<FragmentEndingBinding>(FragmentEndingBinding:
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.score.text = arguments?.getInt("SCORE").toString()
-        binding.score.text = sp.getBestScore().toString()
+        binding.bestScore.text = sp.getBestScore().toString()
 
         binding.menu.setOnClickListener {
             (requireActivity() as MainActivity).navigateBack("main")
